@@ -52,7 +52,7 @@ for i in range(len(test_set_percentages)):
                       metrics=['accuracy'])
 
         # Train the model
-        model.fit(X_train, y_train, epochs=10, batch_size=1, validation_data=(X_test, y_test))
+        model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
 
         # Evaluate the model on the validation set
         y_test_pred_prob = model.predict(X_test)  # Get predicted probabilities
